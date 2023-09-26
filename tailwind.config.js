@@ -28,8 +28,8 @@ export default {
       },
       backgroundImage: {
         site: "url('./src/assets/site-bg.jpg')",
-        about: "url('./src/assets/about.jpg')",
-        services: "url('./src/assets/services.jpg')",
+        about: "url('./src/assets/about.png')",
+        services: "url('./src/assets/services.png')",
       }
     },
   },
