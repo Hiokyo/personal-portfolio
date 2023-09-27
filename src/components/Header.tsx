@@ -1,7 +1,9 @@
-import React from 'react';
 import logo from '../assets/logo.png';
+import { Link } from 'react-scroll';
 
 const Header = () => {
+  
+
   return (
     <header
       className='py-8'
@@ -12,7 +14,13 @@ const Header = () => {
             <img className='w-40 h-auto' src={logo} alt=''></img>
           </a>
           
-          <button className='btn btn-sm'> Work with me</button>
+          <Link
+            to='contact'
+            smooth={true}
+            spy={true}
+          >
+            <button className='btn btn-sm'>Work with me</button>
+          </Link>
 
         </div>
       </div>

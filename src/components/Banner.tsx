@@ -1,4 +1,3 @@
-import React from 'react';
 import avatar from '../assets/avatar.png';
 import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';;
 import { TypeAnimation } from 'react-type-animation';
