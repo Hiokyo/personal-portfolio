@@ -1,5 +1,8 @@
 {
-  "rewrites":  [
+  "routes": {
+    "/src/assets/*": "/public/src/assets"
+  },
+  "rewrites": [
     {"source": "/(.*)", "destination": "/"}
   ]
 }
