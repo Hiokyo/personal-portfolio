@@ -1,8 +1,14 @@
 {
-  "routes": [
-    {"/src/assets/*": "/public/src/assets"}
-  ],
-  "rewrites": [
+  "rewrites":  [
     {"source": "/(.*)", "destination": "/"}
+  ],
+  "builds": [
+    {
+      "src": "./src",
+      "use": "@vercel/static-build",
+      "config": {
+        "assets": "./src/assets"
+      }
+    }
   ]
 }
