@@ -1,13 +1,5 @@
 {
   "rewrites":  [
     {"source": "/(.*)", "destination": "/"}
-  ],
-  "builds": [
-    {
-      "use": "@vercel/static-build",
-      "config": {
-        "assets": "./src/assets"
-      }
-    }
   ]
 }
