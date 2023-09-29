@@ -2,6 +2,7 @@ import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
+import aboutBg from '../assets/about.png'
 
 const About = () => {
   const [ref, inView] = useInView({threshold: 0.5})
@@ -19,7 +20,8 @@ const About = () => {
               once: false,
               amount: 0.3
             }}
-            className='flex-1 bg-about bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top'
+            style={{backgroundImage: `url(${aboutBg})`}} 
+            className='flex-1 bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top'
           >
           </motion.div>
           {/* Text */}
