@@ -3,7 +3,8 @@ import { FaGithub, FaFacebook, FaLinkedin } from 'react-icons/fa';;
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
-
+import { Link } from 'react-scroll';
+import resume from '../assets/file/CV_FE_TranTrungHieu.pdf'
 
 const Banner = () => {
   return (
@@ -75,8 +76,19 @@ const Banner = () => {
               }}
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'
             >
-              <button className='btn btn-lg'>Contact me</button>
-              <a href="#" className='text-gradient btn-link'>My Resume</a>
+              <Link
+                to='contact'
+              >
+                <button className='btn btn-lg'>Contact me</button>
+              </Link>
+              <a 
+                href={resume} 
+                target='_blank' 
+                className='text-gradient btn-link'
+                rel="noreferrer"
+              >
+                My Resume
+              </a>
             </motion.div>
             {/* Social */}
             <motion.div

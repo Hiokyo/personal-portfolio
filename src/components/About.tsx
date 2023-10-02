@@ -2,7 +2,7 @@ import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
-import aboutBg from '../assets/about.png'
+import { Link } from 'react-scroll';
 
 const About = () => {
   const [ref, inView] = useInView({threshold: 0.5})
@@ -20,8 +20,7 @@ const About = () => {
               once: false,
               amount: 0.3
             }}
-            style={{backgroundImage: `url(${aboutBg})`}} 
-            className='flex-1 bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top'
+            className='bg-about flex-1 bg-contain bg-no-repeat h-[640px] mix-blend-lighten bg-top'
           >
           </motion.div>
           {/* Text */}
@@ -85,7 +84,9 @@ const About = () => {
               </div>
             </div>
             <div className='flex gap-x-8 items-center'>
-              <button className='btn btn-lg'>Contact me</button>
+              <Link to='contact'>
+                <button className='btn btn-lg'>Contact me</button>
+              </Link>
               <a href="#" className='text-gradient btn-link'>
                 My Resume
               </a>

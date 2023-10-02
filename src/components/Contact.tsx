@@ -1,7 +1,34 @@
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 
-const Contact = () => {
+interface Props {
+  onSendMessage: (status: boolean) => void
+}
+
+const Contact = (props: Props) => {
+  const { onSendMessage } = props;
+  const form = useRef<any>();
+
+  const sendEmail = (e: any) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_h462wqo',
+      'template_jzgdwtj', 
+      form.current, 
+      'yeXjsQGLVQ17JgQ5c'
+    )
+      .then((result) => {
+          console.log(result.text);
+          onSendMessage(true)
+          form.current.reset()
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <section className='py-16 lg:section' id='contact'>
       <div className="container mx-auto">
@@ -36,23 +63,28 @@ const Contact = () => {
               amount: 0.3
             }}
             className='flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start'
+            ref={form} 
+            onSubmit={sendEmail}
           >
             <input 
               className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
               type="text"
               placeholder='Your name'
+              name="user_name"
             />
              <input 
               className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all'
-              type="text"
+              type="email"
               placeholder='Your email'
+              name="user_email"
             />
             <textarea 
               className='bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12' 
               placeholder='Your message'
+              name="message"
             >
             </textarea>
-            <button className='btn btn-lg'>Send message</button>
+            <button type="submit" className='btn btn-lg'>Send message</button>
           </motion.form>
         </div>
       </div>
