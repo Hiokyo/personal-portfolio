@@ -37,8 +37,10 @@ const About = () => {
             <h2 className='h2 text-accent'>About me.</h2>
             <h3 className='h3 mb-4'>I'm a Front-end Developer with over 2 years of experience.</h3>
             <p className='mb-6'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+              I specialize in using React JS and Vue JS. 
+              My expertise extends beyond programming to include popular UI frameworks such as Ant Design and Tailwind.
+              I'm committed to delivering innovative and high-quality solutions for every project,
+              always ready to face new challenges to continuously enhance my skills and knowledge. 
             </p>
             {/* Stats */}
             <div className='flex gap-x-6 lg:gap-x-10 mb-12'>

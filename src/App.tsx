@@ -29,15 +29,10 @@ function App() {
         <motion.div
           variants={fadeIn('right', 0.3)}
           initial={{opacity: 0, x: 100}}
-          whileInView={'show'}
-          viewport={{
-            once: false,
-            amount: 0.3
-          }}
+          animate= {{ opacity: 1, x: 0 }}
           exit={{
-            opacity: 0, x: 100
+            opacity: 0, x: -100
           }}
-          id="toast-top-right" 
           className="fixed flex items-center w-full max-w-xs p-4 opacity-90 space-x-4 gradient divide-x rounded-lg shadow top-5 right-5 space-x" 
           role="alert"
         >

@@ -63,7 +63,7 @@ const Contact = (props: Props) => {
               amount: 0.3
             }}
             className='flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start'
-            ref={form} 
+            ref={form}
             onSubmit={sendEmail}
           >
             <input 
